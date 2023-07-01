@@ -1,0 +1,9 @@
+az group create --name myResourceGroup --location southcentralus
+
+az vm create \
+    --resource-group myResourceGroup \
+    --name myVM \
+    --image Win2019Datacenter \
+    --assign-identity \
+    --admin-username azureuser \
+    --admin-password yourpassword

@@ -1,0 +1,1 @@
+Set-CalendarProcessing -Identity salledereunion-AddOrganizerToSubject $true -DeleteComments $false -DeleteSubject $false

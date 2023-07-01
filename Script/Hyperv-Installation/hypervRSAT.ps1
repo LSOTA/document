@@ -1,0 +1,1 @@
+Install-WindowsFeature RSAT-Hyper-V-Tools -IncludeAllSubFeature

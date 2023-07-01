@@ -1,0 +1,1 @@
+Set-MailboxFolderPermission -Identity salledereunion:\calendar -User default -AccessRights Reviewer

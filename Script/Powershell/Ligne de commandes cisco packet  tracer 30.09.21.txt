@@ -1,0 +1,199 @@
+192.168.20.0/24
+
+> 	= mode utilisateur
+en 	= pour être en mode Privilège puis entrée
+# 	= mode privilège Administrateur
+conf t 	= mode configure terminal; ce mode servira pour toutes les saisies de commandes d'après
+exit 	= pour sortir? lister l'ensemble des commandes que l’on peut taper (aide contextuelle)
+
+
+en + TAB
+ENABLE
+Configure terminal	mode configure terminal
+controle Z
+exit
+hostname mondoudou
+enable password 123
+exit
+
+config t
+host
+hostname Inn
+username lion password 789
+line cons 0		Password de la console
+password 456
+login
+
+ctrl Z
+
+
+username lion password 789
+line vty 0 4
+login local
+reload
+
+en / enable/ en + TAB 	= mode utilisateur privilège
+conf / conf t		= mode configure
+hostname 		= monchat
+enable password 123 	= 
+line cons 0
+password 456
+login
+exit
+
+username toto password 789
+line vty 0 4
+login local 
+telnet 10.10.10.3
+
+service password-encryption 	= pour masquer les mots de passe
+do sh run
+
+banner motd * acces interdit aux visiteurs *	= indiquer 1 message aux utilisateurs
+
+int vlan 1		= Interface vlan 1
+ip add 10.10.10.3  255.255.0.0
+no shut
+
+do write 
+do reload
+
+
+en / enable/ en + TAB 	= mode utilisateur privilège
+conf / conf t		= mode configure
+enable secret 	123
+do sh run
+
+
+PC1 Port 1		= 10.10.10.1  2550.255.255.0
+PC2 Port 6 		= 192.168.25.2
+PC3 Port 11 		= 172.16.0.3	
+PC5 Port 16		= 192.168.50.4
+
+en 
+conf t
+hostname swtai		= trois mot de passe
+enable password 123
+line cons 0 /line con 0
+password 456
+login 
+exit
+line vty 0 4 
+username NOM password 789
+login local
+exit
+
+ser /exit 
+ser / service password-encryption
+
+service pass
+service password-encryption = CHIFFRER LE MOT DE PASSE
+no service password-encryption 
+banner motd *		= l'accès à cet espace est non autorisé
+domain /domain-l / domain-lookup /
+no ip domain-lookup
+do wr			= do write = Enregistrer
+int gig 0/0/0.10 	+ encapsulation dot1Q 10, permet de subdiviser en sous interface 1 réseau physique.
+ip add 10.10.10.254 255.255.255.0
+no shut
+
+int gig 0/0/0/20 	+ 
+encapsulation dot1Q 20
+ip add 192.168.25.254 255.0.0.0
+no shut / no shutdown
+
+Switch = terminal ok
+
+
+int gig 0/0/0 	/int gig 0/1 (switchport mode trunk)
+not shut 		= Ne pas éteindre
+
+
+Pour créer des VLAN
+conf t
+vlan 10 		= name direction + entrée
+vlan 20 		= name comptable 
+vlan 30 		= name rh
+vlan 40 		= name technicien
+ctrl Z
+
+Pour affecter des ports
+conf t 			= configuration terminal
+do sh vlan
+ctrl Z
+conf t
+int  			= Interface
+vlan 10 		= name technicien
+int range fa 0/1-5 	= ranger d'interface de Fastinternet de 1à5
+switchport mode access	= port du switch en mode accessible
+switchport mode access vlan 10 	= Port du switch en mode accessible pour le vlan 10
+do sh vlan
+
+vlan 20 - int range fa /6-10
+switchport mode access	= port du switch en mode accessible
+switchport mode access vlan 10 	= ort du switch en mode accessible pour le vlan 10
+do sh vlan
+
+vlan 30 - int range fa 0/11-15
+switchport mode access	= port du switch en mode accessible
+switchport mode access vlan 30	= Port du switch en mode accessible pour le vlan 10
+
+vlan 40- int range fa 0/16-20 
+switchport mode access	= port du switch en mode accessible
+switchport mode access vlan 40	= Port du switch en mode accessible pour le vlan 10
+do sh vlan
+
+
+Routage inter vlan 
+
+en 
+conf t
+hostname swtai		= trois mot de passe
+enable password 123
+line cons 0 /line con 0
+password 456
+login 
+exit
+line vty 0 4 
+username NOM password 789
+login local
+exit
+
+ser /exit 
+ser / service password-encryption
+
+service pass
+service password-encryption = CHIFFRER LE MOT DE PASSE
+no service password-encryption 
+banner motd *		= l'accès à cet espace est non autorisé
+domain /domain-l / domain-lookup /
+no ip domain-lookup
+do wr			= do write = Enregistrer
+int gig 0/0/0.10 	+ encapsulation dot1Q 10, permet de subdiviser en sous interface 1 réseau physique.
+ip add 10.10.10.254 255.255.255.0
+no shut
+
+int gig 0/0/0/20 	+ 
+encapsulation dot1Q 20
+ip add 192.168.25.254 255.0.0.0
+no shut / no shutdown
+
+Switch = terminal ok
+
+
+int gig 0/0/0 	/int gig 0/1 (switchport mode trunk)
+not shut 	= Ne pas éteindre
+
+
+en
+password
+SWTAI#config)int gig 0/1
+switchport mode trunk
+
+
+
+
+
+
+
+

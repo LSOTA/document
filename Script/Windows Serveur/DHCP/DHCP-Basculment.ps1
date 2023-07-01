@@ -1,0 +1,1 @@
+Add-DhcpServerv4Failover –ComputerName srvDHCP01.domain.local –PartnerServer srvDHCP02.domain.local –Name clusterDHCP –ScopeID 10.0.0.0 –LoadBalancePercent 70 –SharedSecret PasseDeChiffrement -Force

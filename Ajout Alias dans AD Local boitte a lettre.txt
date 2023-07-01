@@ -1,0 +1,13 @@
+1. Ouvrir la console Utilisateurs et Ordinateur Active Directory et vérifier que l’affichage des Fonctionnalités avancées est activé
+
+2. Faire un clic droit sur l’utilisateur 1 puis cliquer sur Propriétés 2
+
+3. Aller sur l’onglet Éditeur d’attributs 1, rechercher et sélectionner proxyAddresses 2 et cliquer sur Modifier 
+
+4. Entrer l’alias à ajouter (SMTP:leonardsota@domaine.com) 1 et cliquer sur Ajouter
+
+5. L’adresse est ajoutée 1, cliquer sur OK 2 pour fermer l’éditeur.
+
+6. Appliquer les propriétés de l’utilisateur.
+
+7. L’alias sera ajouté lors du prochain cycle de synchronisation.

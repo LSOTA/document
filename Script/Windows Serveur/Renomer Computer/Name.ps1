@@ -1,0 +1,1 @@
+rename-computer -newname SRV-Recuperation2

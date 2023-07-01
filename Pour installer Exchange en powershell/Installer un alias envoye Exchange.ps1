@@ -1,0 +1,1 @@
+Set-OrganizationConfig -SendFromAliasEnabled $True

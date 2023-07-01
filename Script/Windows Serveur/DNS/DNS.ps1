@@ -1,0 +1,1 @@
+Set-DnsClientServerAddress -InterfaceIndex 4 -ServerAddresses 192.168.24.200, 192.168.24.201
